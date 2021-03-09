@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Adam's Ale</title>
+    </head>
+
+  <body>
+    <!-- Header -->
+    <section id="header">
+      <div class="header container">
+          <div class="brand">
+          <a href="#hero">
+              <h1><span>A</span>dam's <span>A</span>le</h1>
+            </a>
+          </div>
+            <div class="hamburger">
+              <div class="bar"></div>
+            </div>
+            </div>
+    </section>
+    <!-- End Header -->
+
+
+    <!-- Hero Section  -->
+    <section id="hero">
+      <div class="hero container">
+        <div>
+          <h1><br>Natual calamities <span></span></h1>
+          <h1> can't be prevented but...<span></span></h1>
+          <h1>their IMPACT can be MITIGATED.<span></span></h1>
+          <a href="#projects" type="submit" class="cta" rel="nofollow noopener"><center>Find your nearest water source now</center></a>
+
+          <script>
+            var text = "";
+
+            function getLocation() {
+              if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+              }
+            }
+
+            function showPosition(position) {
+              var text = "http://adams-ale.centralindia.cloudapp.azure.com/firstApp/hello?lat=" + position.coords.latitude + "&long=" + position.coords.longitude;
+              window.location.href = text;
+            }
+
+          </script>
+        </div>
+      </div>
+    </section>
+    <!-- End Hero Section  -->
+    <!-- About Section -->
+    <section id="about">
+      <div class="about container">
+        <div class="col-left">
+        </div>
+        <div class="col-right">
+          <h1 class="section-title">About <span>us</span></h1>
+          <h2>Potable Water Location Tagging System for Victims of Natural Calamities.</h2>
+          <p>The Adam’s Ale project, when implemented, would be highly beneficial to people in case of disasters and natural calamities.
+We hope to significantly reduce the post-disaster epidemics due to water-borne diseases.
+</p>
+        </div>
+      </div>
+    </section>
+    <!-- End About Section -->
+
+    <!-- Footer -->
+    <section id="footer">
+      <div class="footer container">
+        <div class="brand">
+        <h1><center><span>A Project</span> by <span>Team </span> 'What's In a Name?'</center></h1>
+ <h2><center>UN-SDG 6:
+Clean Water & Sanitation</center></h2>
+        </div>
+        <p>Copyright © 2021 What's in a Name? Team.<br><center>All rights reserved</center></p>
+      </div>
+    </section>
+    <!-- End Footer -->
+    <script src="./app.js"></script>
+  </body>
+
+</html>
