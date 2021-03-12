@@ -5,6 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Adam's Ale</title>
+     <script>
+            var text = "";
+
+            function getLocation() {
+              if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+              }
+            }
+
+            function showPosition(position) {
+              var text = "http://adams-ale.centralindia.cloudapp.azure.com/firstApp/hello?lat=" + position.coords.latitude + "&long=" + position.coords.longitude;
+              window.location.href = text;
+            }
+
+          </script>
     </head>
 
   <body>
@@ -31,23 +46,9 @@
           <h1><br>Natual calamities <span></span></h1>
           <h1> can't be prevented but...<span></span></h1>
           <h1>their IMPACT can be MITIGATED.<span></span></h1>
-          <a href="#projects" type="submit" class="cta" rel="nofollow noopener"><center>Find your nearest water source now</center></a>
+          <a onclick="getLocation()" type="submit" class="cta" rel="nofollow noopener"><center>Find your nearest water source now</center></a>
 
-          <script>
-            var text = "";
-
-            function getLocation() {
-              if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-              }
-            }
-
-            function showPosition(position) {
-              var text = "http://adams-ale.centralindia.cloudapp.azure.com/firstApp/hello?lat=" + position.coords.latitude + "&long=" + position.coords.longitude;
-              window.location.href = text;
-            }
-
-          </script>
+         
         </div>
       </div>
     </section>
