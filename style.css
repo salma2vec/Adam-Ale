@@ -1,376 +1,189 @@
-@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 10px;
-  font-family: 'Montserrat', sans-serif;
+:root {
   scroll-behavior: smooth;
 }
 
+body {
+  font-family: "Open Sans", sans-serif;
+  color: #444444;
+}
+
 a {
+  color: #4154f1;
   text-decoration: none;
 }
 
-.container {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+a:hover {
+  color: #717ff5;
+  text-decoration: none;
 }
 
-
-img {
-  height: 100%;
-  width: 100%;
-  object-fit: cover;
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Nunito", sans-serif;
 }
 
-p {
-  color: black;
-  font-size: 1.4rem;
-  margin-top: 5px;
-  line-height: 2.5rem;
-  font-weight: 300;
-  letter-spacing: 0.05rem;
+section {
+  padding: 60px 0;
+  overflow: hidden;
 }
 
-.section-title {
-  font-size: 4rem;
-  font-weight: 300;
-  color: black;
-  margin-bottom: 10px;
-  text-transform: uppercase;
-  letter-spacing: .2rem;
+.section-header {
   text-align: center;
+  padding-bottom: 40px;
 }
 
-.section-title span {
-  color: DodgerBlue;
-}
-
-.cta {
-  display: inline-block;
-  padding: 10px 30px;
-  color: #fff !important;
-  background: linear-gradient(to right, DodgerBlue, #191970) !important;
-  border: 2px solid linear-gradient(to right, #67b26b, #4ca2cb) !important;
-  font-size: 2rem;
-  border-radius: 20px;
+.section-header h2 {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin: 0;
+  color: #4154f1;
   text-transform: uppercase;
-  letter-spacing: 0.1rem;
-  margin-top: 30px;
-  cursor: pointer;
-  transition: all 0.4s ease 0s;
-  transition-property: background-color, color;
-}
-.cta span {
-   cursor: pointer;
-   display: inline-block;
-   position: relative;
-   transition: 0.4s;
- }
-
-.cta:hover {
-  text-shadow: 0px 0px 6px rgba(255, 255, 255, 1);
--webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
--moz-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
-transition: all 0.4s ease 0s;
-border-radius: 50px;
-border-color: #494949 !important;
-padding-right: 25px;
 }
 
-
-.brand h1 {
-  font-size: 3rem;
-  text-transform: uppercase;
-  color: white;
+.section-header p {
+  margin: 10px 0 0 0;
+  padding: 0;
+  font-size: 38px;
+  line-height: 42px;
+  font-weight: 700;
+  color: #012970;
 }
 
-.brand h1 span {
-  color: DodgerBlue;
+@media (max-width: 768px) {
+  .section-header p {
+    font-size: 28px;
+    line-height: 32px;
+  }
 }
 
-/* Header section */
-#header {
-  position: fixed;
-  z-index: 1000;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: auto;
+/* for disabling aos animation delay on mobile devices */
+@media screen and (max-width: 768px) {
+  [data-aos-delay] {
+    transition-delay: 0 !important;
+  }
 }
 
-#header .header {
-  min-height: 8vh;
-  background-color: #29323c;
-  transition: 0.3s ease background-color;
+.header {
+  transition: all 0.5s;
+  z-index: 997;
+  padding: 20px 0;
 }
 
-/* End Header section */
+.header.header-scrolled {
+  background: #fff;
+  padding: 15px 0;
+  box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
+}
 
-/* Hero Section */
-#hero {
+.header .logo {
+  line-height: 0;
+}
+
+.header .logo img {
+  max-height: 40px;
+  margin-right: 6px;
+}
+
+.header .logo span {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #012970;
+  font-family: "Nunito", sans-serif;
+  margin-top: 3px;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background: url(../img/bg.png) top center no-repeat;
   background-size: cover;
-  background-position: top center;
-  position: relative;
-  z-index: 1;
 }
 
-#hero::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 100%;
-  width: 100%;
-  background-color: DodgerBlue;
-  opacity: 0.7;
-  z-index: -1;
+.hero h1 {
+  margin: 0;
+  font-size: 48px;
+  font-weight: 700;
+  color: #012970;
 }
 
-#hero .hero {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 50px;
-  justify-content: flex-start;
+.hero h2 {
+  color: #444444;
+  margin: 15px 0 0 0;
+  font-size: 26px;
 }
 
-#hero h1 {
-  display: block;
-  width: fit-content;
-  font-size: 4rem;
-  position: relative;
-  color: transparent;
-  animation: text_reveal 0.5s ease forwards;
-  animation-delay: 1s;
+.hero .btn-get-started {
+  margin-top: 30px;
+  line-height: 0;
+  padding: 15px 40px;
+  border-radius: 4px;
+  transition: 0.5s;
+  color: #fff;
+  background: #4154f1;
+  box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
 }
 
-#hero h1:nth-child(1) {
-  animation-delay: 1s;
+.hero .btn-get-started span {
+  font-family: "Nunito", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1px;
 }
 
-#hero h1:nth-child(2) {
-  animation-delay: 2s;
+.hero .btn-get-started i {
+  margin-left: 5px;
+  font-size: 18px;
+  transition: 0.3s;
 }
 
-#hero h1:nth-child(3) {
-  animation: text_reveal_name 0.5s ease forwards;
-  animation-delay: 3s;
+.hero .btn-get-started:hover i {
+  transform: translateX(5px);
 }
 
-#hero h1 span {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 0;
-  background-color: DodgerBlue;
-  animation: text_reveal_box 1s ease;
-  animation-delay: 0.5s;
+.hero .hero-img {
+  text-align: right;
 }
 
-#hero h1:nth-child(1) span {
-  animation-delay: 0.5s;
-}
-
-#hero h1:nth-child(2) span {
-  animation-delay: 1.5s;
-}
-
-#hero h1:nth-child(3) span {
-  animation-delay: 2.5s;
-}
-
-/* End Hero Section */
-
-/* About Section */
-#about .about {
-  flex-direction: column-reverse;
-  text-align: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 100px 20px;
-}
-
-#about .col-left {
-  width: 250px;
-  height: 360px;
-}
-
-#about .col-right {
-  width: 100%;
-}
-
-#about .col-right h2 {
-  font-size: 1.8rem;
-  font-weight: 500;
-  letter-spacing: 0.2rem;
-  margin-bottom: 10px;
-}
-
-#about .col-right p {
-  margin-bottom: 20px;
-}
-
-#about .col-right .cta {
-  color: black;
-  margin-bottom: 50px;
-  padding: 10px 20px;
-  font-size: 2rem;
-}
-
-#about .col-left .about-img {
-  height: 100%;
-  width: 100%;
-  position: relative;
-  border: 10px solid white;
-}
-
-#about .col-left .about-img::after {
-  content: '';
-  position: absolute;
-  left: -33px;
-  top: 19px;
-  height: 98%;
-  width: 98%;
-  border: 7px solid DodgerBlue;
-  z-index: -1;
-}
-
-/* End About Section */
-
-/* Footer */
-#footer {
-  background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
-}
-
-#footer .footer {
-  min-height: 200px;
-  flex-direction: column;
-  padding-top: 50px;
-  padding-bottom: 10px;
-}
-
-#footer h2 {
-  color: white;
-  font-weight: 500;
-  font-size: 1.8rem;
-  letter-spacing: 0.1rem;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
-
-#footer p {
-  color: white;
-  font-size: 1.3rem;
-}
-
-/* End Footer */
-
-/* Keyframes */
-@keyframes hamburger_puls {
-  0% {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  100% {
-    opacity: 0;
-    transform: scale(1.4);
+@media (min-width: 1024px) {
+  .hero {
+    background-attachment: fixed;
   }
 }
 
-@keyframes text_reveal_box {
-  50% {
+@media (max-width: 991px) {
+  .hero {
+    height: auto;
+    padding: 120px 0 60px 0;
+  }
+  .hero .hero-img {
+    text-align: center;
+    margin-top: 80px;
+  }
+  .hero .hero-img img {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 32px;
+  }
+  .hero h2 {
+    font-size: 24px;
+  }
+  .hero .hero-img img {
     width: 100%;
-    left: 0;
-  }
-
-  100% {
-    width: 0;
-    left: 100%;
   }
 }
 
-@keyframes text_reveal {
-  100% {
-    color: white;
-  }
-}
-
-@keyframes text_reveal_name {
-  100% {
-    color: MidnightBlue;
-    font-weight: 500;
-  }
-}
-
-/* End Keyframes */
-
-/* Media Query For Tablet */
-@media only screen and (min-width: 768px) {
-  .cta {
-    font-size: 2.5rem;
-    padding: 20px 60px;
-  }
-
-  h1.section-title {
-    font-size: 6rem;
-  }
-
-  /* Hero */
-  #hero h1 {
-    font-size: 7rem;
-  }
-
-  /* End Hero */
 
 
-  /* About */
-  #about .about {
-    flex-direction: row;
-  }
 
-  #about .col-left {
-    width: 600px;
-    height: 400px;
-    padding-left: 60px;
-  }
 
-  #about .about .col-left .about-img::after {
-    left: -45px;
-    top: 34px;
-    height: 98%;
-    width: 98%;
-    border: 10px solid DodgerBlue;
-  }
 
-  #about .col-right {
-    text-align: left;
-    padding: 30px;
-  }
-
-  #about .col-right h1 {
-    text-align: left;
-  }
-
-  /* End About */
-}
-/* Media Query For Desktop */
-@media only screen and (min-width: 1200px) {
-
-  /* header */
-  #header .hamburger {
-    display: none;
-  }
-
-  /* End header */
-  }
+  
 
