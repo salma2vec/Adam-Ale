@@ -33,4 +33,4 @@ The project is divided into 3 parts:
 
 ## Tech Stack
 
-
+## Future Scope
