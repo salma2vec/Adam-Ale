@@ -5,8 +5,8 @@
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-  <title>Adam's Ale | Home</title>
-
+  <title>Adam's Ale</title>
+  
   <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
@@ -17,6 +17,21 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
   <link href="assets/css/style.css" rel="stylesheet">
+   <script>
+            var text = "";
+
+            function getLocation() {
+              if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+              }
+            }
+
+            function showPosition(position) {
+              var text = "http://adams-ale.centralindia.cloudapp.azure.com/firstApp/hello?lat=" + position.coords.latitude + "&long=" + position.coords.longitude;
+              window.location.href = text;
+            }
+
+          </script>
 </head>
 
 <body>
@@ -42,7 +57,7 @@
           <h2 data-aos="fade-up" data-aos-delay="400">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est ex amet molestias. Reiciendis, doloremque unde tempore quam laborum aperiam reprehenderit hic nostrum, vitae vero ex temporibus accusamus. Optio, expedita consequatur? Lorem, ipsum dolor sit amet consectetur adipisicing elit. Explicabo sit minima praesentium impedit repellat voluptates doloribus vitae inventore quasi adipisci perferendis et, sed delectus enim odio temporibus excepturi saepe eum.</h2>
           <div data-aos="fade-up" data-aos-delay="600">
             <div class="text-center text-lg-start">
-              <a href="#about" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
+              <a onclick="getLocation()" class="btn-get-started scrollto d-inline-flex align-items-center justify-content-center align-self-center">
                 <span>Get location</span>
                 <i class="bi bi-arrow-right"></i>
               </a>
