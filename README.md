@@ -2,7 +2,7 @@
 A Potable Water Location Tagging System for Victims of Natural Calamities.
 
 ## Introduction
-- No one has control over any natural calamity or disaster. But, we can surely control how it affects our lives by acting fast enough. It is seen that the unavailability of potable water after a disaster is a cause of distress to many and consumption of water unfit for drinking leads to various water-borne diseases and maybe a pandemic.
+- No one has control over any natural calamity or disaster. But, we can surely control how it affects our lives by acting fast enough. It is seen that the unavailability of potable water after a disaster is a cause of distress to many and consumption of water unfit for drinking leads to various water-borne diseases and maybe, even a pandemic.
 - The Adam’s Ale (meaning ‘Water’) project, when implemented, would be highly beneficial to people in case of disasters and natural calamities.
 - We hope to significantly reduce the post-disaster epidemics due to water-borne diseases.
 
