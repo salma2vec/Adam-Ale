@@ -7,7 +7,8 @@
 </p>
 <h2 align="center"><b><bold>A Potable Water Location Tagging System for Victims of Natural Calamities.</b></h3>
 
-
+[![forthebadge](https://forthebadge.com/images/badges/Check-it-out.svg)](https://forthebadge.com) @
+https://github.com/AdityaMitra5102/Adams_Ale
 
 ## Introduction 
 - Natural calamities can't be prevented but the impact of the disaster on life sure can be mitigated to a certain extent by taking quick remedial action.  It is seen that the unavailability of potable water after a disaster leads to consumption of water unfit for drinking rendering individuals prone to various water-borne diseases and maybe, even a full-blown pandemic in worst-case scenarios.
