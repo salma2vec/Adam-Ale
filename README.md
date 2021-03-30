@@ -48,6 +48,11 @@ The SMS Base station receives the GPS coordinates of the user via SMS and sends 
 ![](https://www.equinix.com/contentAsset/raw-data/0fce45a2-82a8-430a-b7fa-03c973263939/fileAsset?language_id=1)
 ![](https://www.mapmyindia.com/blog/wp-content/uploads/2010/09/mapmyindia-logo.jpg)
 
+### WebApp
+![HTML 5](https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white) 
+![CSS 3](https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white) 
+![JavaScript](https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
+![BootStrap](https://img.shields.io/badge/bootstrap%20-%23323330.svg?&style=for-the-badge&logo=bootstrap&logoColor=white)
 
 ## Future Scope
 - As cellular network might be disrupted in case of natural calamities, even the offline way of updating the database might not work. Hence, we have decided to add Lo-Ra WAN feature to the testing probe in later versions of the project. 
