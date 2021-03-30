@@ -44,14 +44,7 @@ The project is divided into 4 parts:
 #### 4. SMS Base station
 The SMS Base station receives the GPS coordinates of the user via SMS and sends it to the cloud. Since we are well aware of the fact that the user is offline, we are fetching route directions and sending it back via another SMS.
 
-## Tech Stack
-![](https://www.arduino.cc/en/uploads/Trademark/ArduinoCommunityLogo.png)
-![](https://firebase.google.com/downloads/brand-guidelines/PNG/logo-built_white.png)
-![](https://flutter.dev/assets/flutter-lockup-1caf6476beed76adec3c477586da54de6b552b2f42108ec5bc68dc63bae2df75.png)
-![](https://www.equinix.com/contentAsset/raw-data/0fce45a2-82a8-430a-b7fa-03c973263939/fileAsset?language_id=1)
-![](https://www.mapmyindia.com/blog/wp-content/uploads/2010/09/mapmyindia-logo.jpg)
-
-### WebApp
+### WebApp Tech Stack
 ![HTML 5](https://img.shields.io/badge/html5%20-%23E34F26.svg?&style=for-the-badge&logo=html5&logoColor=white) 
 ![CSS 3](https://img.shields.io/badge/css3%20-%231572B6.svg?&style=for-the-badge&logo=css3&logoColor=white) 
 ![JavaScript](https://img.shields.io/badge/javascript%20-%23323330.svg?&style=for-the-badge&logo=javascript&logoColor=%23F7DF1E) 
