@@ -15,7 +15,7 @@ Check it out --> [HERE](https://github.com/AdityaMitra5102/Adams_Ale)
 ## Introduction 
 - Natural calamities can't be prevented but the impact of the disaster on life sure can be mitigated to a certain extent by taking quick remedial action.  It is seen that the unavailability of potable water after a disaster leads to consumption of water unfit for drinking rendering individuals prone to various water-borne diseases and maybe, even a full-blown pandemic in worst-case scenarios.
 - The Adam’s Ale project, when implemented, would be highly beneficial to people in case of such disasters and natural calamities.
-- We hope to significantly reduce the post-disaster epidemics due to water-borne diseases through this project.
+- We aim to significantly reduce the post-disaster epidemics due to water-borne diseases through this project.
 
 ## Features
 The personnel from rescue team (referred to here as ‘Tester’) will be carrying ‘Testing Probes’ to check the quality of water in local water sources. If it is found fit for drinking, the location will be saved for the victims to consume water from that.
