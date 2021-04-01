@@ -53,5 +53,5 @@ The SMS Base station receives the GPS coordinates of the user via SMS and sends 
 ## Future Scope
 - As cellular network might be disrupted in case of natural calamities, even the offline way of updating the database might not work. Hence, we have decided to add LoRaWAN feature to the testing probe in later versions of the project. 
 Then, the base station would be able to communicate the same to the server.
-- In further versions of the project, we aim to develop the application for Kai OS and other feature phones so that no one is deprived of the basic amenity, drinking water.
+- In further versions of the project, we aim to develop the application for Kai OS and other feature phones so that no one is deprived of the basic amenity (bare necessity) - drinking water.
 - Backend Modification and implementation of load balancing to make Adam’s Ale available to more number of users at a time.
