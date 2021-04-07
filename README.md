@@ -7,7 +7,7 @@
 </p>
 <h2 align="center"><b><bold>A Potable Water Location Tagging System for Victims of Natural Calamities.</b></h2>
 
-Check it out --> [HERE](https://github.com/AdityaMitra5102/Adams_Ale)
+Check it out ---> [HERE](https://github.com/AdityaMitra5102/Adams_Ale)
 
   
 
