@@ -17,21 +17,7 @@
   <link href="assets/vendor/aos/aos.css" rel="stylesheet">
 
   <link href="assets/css/style.css" rel="stylesheet">
-   <script>
-            var text = "";
-
-            function getLocation() {
-              if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-              }
-            }
-
-            function showPosition(position) {
-              var text = "http://adams-ale.centralindia.cloudapp.azure.com/firstApp/hello?lat=" + position.coords.latitude + "&long=" + position.coords.longitude;
-              window.location.href = text;
-            }
-
-          </script>
+  
 </head>
 
 <body>
@@ -65,7 +51,14 @@
           </div>
         </div>
         <div class="col-lg-6 hero-img" data-aos="zoom-out" data-aos-delay="100">
-          <img src="assets/img/graphic.png" class="img-fluid" alt="">
+          <div>
+            <iframe id="embmap" width="546" height="546" frameborder="0" src="https://www.bing.com/maps/embed?h=546&w=546&cp=20.00630000000001~77.006&lvl=1&typ=d&sty=r&src=SHELL&FORM=MBEDV8" scrolling="no">
+            </iframe>
+            <div style="white-space: nowrap; text-align: center; width: 546px; padding: 6px 0;">
+               <a id="largeMapLink" target="_blank" href="https://www.bing.com/maps?cp=20.00630000000001~77.006&amp;sty=r&amp;lvl=11&amp;FORM=MBEDLD">View Larger Map</a> &nbsp; | &nbsp;
+               <a id="dirMapLink" target="_blank" href="https://www.bing.com/maps/directions?cp=20.00630000000001~77.006&amp;sty=r&amp;lvl=11&amp;rtp=~pos.20.00630000000001_77.006&amp;FORM=MBEDLD">Get Directions</a>
+           </div>
+        </div>
         </div>
       </div>
     </div>
@@ -77,6 +70,53 @@
 
   <!-- Main JS File -->
   <script src="assets/js/main.js"></script>
+  <script>
+    var x = document.getElementById("demo");
+    
+    function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else { 
+        console.log("Geolocation is not supported by this browser.");
+      }
+    }
+    
+    function showPosition(position) {
+      console.log("Latitude: " + position.coords.latitude + 
+      "<br>Longitude: " + position.coords.longitude);
+      var url="http://localhost:7071/api/request?func=get&lat="+position.coords.latitude+"&lon="+position.coords.longitude;
+      console.log(url);
+      httpGet(url);
+     
+      
+    }
 
+    function httpGet(theUrl)
+    {
+      /*var xmlHttp = new XMLHttpRequest();
+      xmlHttp.open( "GET", theUrl); // false for synchronous request
+      xmlHttp.setRequestHeader("Access-Control-Allow-Origin", true)
+       xmlHttp.send();
+       return xmlHttp.responseText;*/
+       var s=fetch(theUrl)
+    .then(response => response.text())
+    .then(json =>{console.log(json);
+    changeMap(json);
+    });
+   
+    }
+
+    function changeMap(json)
+    {
+      json=json.replace(",","~");
+      var y=document.getElementById("embmap");
+      y.setAttribute("src","https://www.bing.com/maps/embed?h=546&w=546&cp="+json+"&lvl=18&typ=d&sty=r&src=SHELL&FORM=MBEDV8")
+      y=document.getElementById("largeMapLink");
+      y.setAttribute("href","https://www.bing.com/maps?cp="+json+"&amp;sty=r&amp;lvl=11&amp;FORM=MBEDLD")
+      json2=json.replace("~","_");
+      y=document.getElementById("dirMapLink")
+      y.setAttribute("href","https://www.bing.com/maps?sp=point."+json2) 
+    }
+    </script>
 </body>
 </html>
