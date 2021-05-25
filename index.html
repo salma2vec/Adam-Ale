@@ -84,7 +84,7 @@
     function showPosition(position) {
       console.log("Latitude: " + position.coords.latitude + 
       "<br>Longitude: " + position.coords.longitude);
-      var url="http://localhost:7071/api/request?func=get&lat="+position.coords.latitude+"&lon="+position.coords.longitude;
+      var url="https://adamsalebackend.azurewebsites.net/api/request?func=get&lat="+position.coords.latitude+"&lon="+position.coords.longitude;
       console.log(url);
       httpGet(url);
      
@@ -93,11 +93,7 @@
 
     function httpGet(theUrl)
     {
-      /*var xmlHttp = new XMLHttpRequest();
-      xmlHttp.open( "GET", theUrl); // false for synchronous request
-      xmlHttp.setRequestHeader("Access-Control-Allow-Origin", true)
-       xmlHttp.send();
-       return xmlHttp.responseText;*/
+     
        var s=fetch(theUrl)
     .then(response => response.text())
     .then(json =>{console.log(json);
